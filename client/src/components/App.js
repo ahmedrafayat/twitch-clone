@@ -8,20 +8,23 @@ import StreamShow from "./streams/StreamShow";
 import Header from './Header'
 
 const App = () => {
-    return <div>
-        <BrowserRouter>
-            <div>
-                <Header />
+    return (
+        <div className="container">
+            <BrowserRouter>
                 <div>
-                    <Route path="/" exact component={StreamList} />
-                    <Route path="/streams/new" component={StreamCreate} />
-                    <Route path="/streams/delete" component={StreamDelete} />
-                    <Route path="/streams/edit" component={StreamEdit} />
-                    <Route path="/streams/show" component={StreamShow} />
+                    <Header />
+                    <div>
+                        <Route path="/" exact component={StreamList} />
+                        <Route path="/streams/new" component={StreamCreate} />
+                        <Route path="/streams/delete" component={StreamDelete} />
+                        <Route path="/streams/edit" component={StreamEdit} />
+                        <Route path="/streams/show" component={StreamShow} />
+                    </div>
                 </div>
-            </div>
-        </BrowserRouter>
-    </div>;
+            </BrowserRouter>
+        </div>
+    )
+
 }
 
 export default App;
